@@ -1,11 +1,6 @@
-export declare function isType(type: string): (param: any) => boolean;
-export declare const isObject: (param: any) => boolean;
-export declare const isArray: (param: any) => boolean;
-export declare const isFunction: (param: any) => boolean;
-export declare const isNumber: (param: any) => boolean;
-export declare const isString: (param: any) => boolean;
-export declare const isBoolean: (param: any) => boolean;
-export declare const isNull: (param: any) => boolean;
-export declare const isUndefined: (param: any) => boolean;
-export declare const isEmptyObj: (param: any) => boolean;
 export declare const noop: () => void;
+export { isType, isObject, isArray, isFunction, isNumber, isString, isBoolean, isNull, isUndefined, isEmptyObj, } from './type';
+export { cookies } from './cookie';
+export { debounce } from './debounce-throttle';
+export { getPercentNum, getPercentStr, getFileNameFromOssUrl, getFileSuffix, } from './format';
+export { copyText, downloadImage, downloadURL, generateRandom, } from './oper';
