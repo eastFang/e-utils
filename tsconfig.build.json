@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "target": "es5",
+    "declaration": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/components/*", "src/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts", "src/setupTests.ts"]
+}

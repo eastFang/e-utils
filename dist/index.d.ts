@@ -1,0 +1,11 @@
+export declare function isType(type: string): (param: any) => boolean;
+export declare const isObject: (param: any) => boolean;
+export declare const isArray: (param: any) => boolean;
+export declare const isFunction: (param: any) => boolean;
+export declare const isNumber: (param: any) => boolean;
+export declare const isString: (param: any) => boolean;
+export declare const isBoolean: (param: any) => boolean;
+export declare const isNull: (param: any) => boolean;
+export declare const isUndefined: (param: any) => boolean;
+export declare const isEmptyObj: (param: any) => boolean;
+export declare const noop: () => void;

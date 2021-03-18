@@ -1,0 +1,28 @@
+{
+  "name": "@ywf/utils",
+  "version": "0.0.1",
+  "description": "一知前端工具库",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.yiwise.local/ai-call-platform/front-project/yf-utils.git"
+  },
+  "keywords": [
+    "yiwise",
+    "frontend",
+    "utils"
+  ],
+  "author": "fangzhendong@yiwise.com",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://nexus.yiwise.net/repository/yf-utils"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}
