@@ -32,5 +32,5 @@ test('根据oss地址获取文件名', () => {
 })
 
 test('根据oss地址获取文件后缀', () => {
-  expect(getFileSuffix(mockOssUrl)).toBe('jpeg1')
+  expect(getFileSuffix(mockOssUrl)).toBe('jpeg')
 })
