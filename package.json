@@ -53,7 +53,7 @@
       "eslint"
     ],
     "__tests__/**/*.js": [
-      "npm run test"
+      "jest"
     ]
   },
   "dependencies": {}
