@@ -7,9 +7,6 @@
     "declaration": true,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {
-      "*": ["src/components/*", "src/*"]
-    }
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.ts", "src/setupTests.ts"]

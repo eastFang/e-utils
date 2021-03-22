@@ -5,10 +5,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:dev": "jest --watch --notify --config=jest.config.js",
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.build.json -w",
-    "lint": "eslint --ext .ts,.js src",
+    "build:dev": "tsc -p tsconfig.build.json -w",
+    "lint": "eslint --ext .ts,.js src && npm run test",
     "prepublish": "npm run lint"
   },
   "repository": {
@@ -26,13 +27,19 @@
     "registry": "http://nexus.yiwise.net/repository/yf-utils"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "babel-jest": "^26.6.3",
     "eslint": "^7.22.0",
     "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
     "typescript": "^4.2.3"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {}
 }
