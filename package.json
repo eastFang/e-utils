@@ -1,5 +1,5 @@
 {
-  "name": "@ywf/utils",
+  "name": "e-utils",
   "version": "0.0.1",
   "description": "工具库",
   "main": "./dist/index.js",
