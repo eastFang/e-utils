@@ -1,7 +1,7 @@
 {
   "name": "@ywf/utils",
-  "version": "0.0.4",
-  "description": "一知前端工具库",
+  "version": "0.0.1",
+  "description": "工具库",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -14,17 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.yiwise.local/ai-call-platform/front-project/yf-utils.git"
+    "url": "https://github.com/eastFang/e-utils.git"
   },
   "keywords": [
-    "yiwise",
     "frontend",
     "utils"
   ],
-  "author": "fangzhendong@yiwise.com",
+  "author": "fangzhendong95@qq.com",
   "license": "ISC",
   "publishConfig": {
-    "registry": "http://nexus.yiwise.net/repository/yf-utils"
+    "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",

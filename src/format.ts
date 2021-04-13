@@ -83,3 +83,43 @@ export function getFileSuffix(url: string): string {
 
   return lastPoint[1] === 'jpg' ? 'jpeg' : lastPoint[1]
 }
+
+export function generateRandom(): string {
+  const randomStr = Math.random().toString().slice(-6)
+  const timeStamp = Date.now()
+  return randomStr + timeStamp
+}
+export function base64UrltoFile(base64Url: string, filename?: string): File {
+  const arr = base64Url.split(',')
+  const mime = arr[0].match(/:(.*?);/)[1]
+  const bstr = arr[1]
+
+  const dbstr = window.atob(bstr)
+  let n = dbstr.length
+  const uint8Array = new Uint8Array(n)
+
+  while(n--) {
+    uint8Array[n] = dbstr.charCodeAt(n)
+  }
+
+  return new File([uint8Array], filename || `${generateRandom()}.png`, { type: mime })
+}
+
+export function getFirstFrameFromVideo(videoSrc: string): Promise<any> {
+  return new Promise((resolve, reject) => {
+    const video = document.createElement('video')
+      video.src = videoSrc
+      video.setAttribute('preload', 'auto') // 必须设置
+      
+      video.addEventListener('loadeddata', () => {
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+        canvas.width = video.videoWidth // 获取video
+        canvas.height = video.videoHeight
+        ctx.drawImage(video, 0, 0)
+        const base64Url = canvas.toDataURL('image/png')
+
+        resolve(base64UrltoFile(base64Url))
+      })
+  })
+}
