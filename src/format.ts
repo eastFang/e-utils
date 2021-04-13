@@ -90,8 +90,9 @@ export function generateRandom(): string {
   return randomStr + timeStamp
 }
 export function base64UrltoFile(base64Url: string, filename?: string): File {
-  const arr = base64Url.split(',')
-  const mime = arr[0].match(/:(.*?);/)[1]
+  const arr: string[] = base64Url.split(',')
+  const mimeArr = arr && arr[0] && arr[0].match(/:(.*?);/)
+  const mime = mimeArr ? mimeArr[1] : ''
   const bstr = arr[1]
 
   const dbstr = window.atob(bstr)
@@ -112,8 +113,8 @@ export function getFirstFrameFromVideo(videoSrc: string): Promise<any> {
       video.setAttribute('preload', 'auto') // 必须设置
       
       video.addEventListener('loadeddata', () => {
-        const canvas = document.createElement('canvas')
-        const ctx = canvas.getContext('2d')
+        const canvas:HTMLCanvasElement = document.createElement('canvas')
+        const ctx = <CanvasRenderingContext2D> canvas.getContext('2d')
         canvas.width = video.videoWidth // 获取video
         canvas.height = video.videoHeight
         ctx.drawImage(video, 0, 0)
